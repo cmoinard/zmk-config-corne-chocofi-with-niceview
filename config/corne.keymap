@@ -19,7 +19,7 @@
 
         Reset {
             bindings = <&sys_reset>;
-            key-positions = <5 29 6 30>;
+            key-positions = <5 29 1 25>;
             layers = <0>;
         };
     };
