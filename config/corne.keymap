@@ -9,6 +9,18 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        TapPrefered: TapPrefered {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAPPREFERED";
+            bindings = <&none>, <&none>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <225>;
+            flavor = "tap-preferred";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
