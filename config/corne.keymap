@@ -17,10 +17,22 @@
     combos {
         compatible = "zmk,combos";
 
-        Reset {
-            bindings = <&sys_reset>;
-            key-positions = <5 29 1 25>;
-            layers = <0>;
+        Enter {
+            bindings = <&kp ENTER>;
+            key-positions = <32 33>;
+            layers = <0 1>;
+        };
+
+        Tab {
+            bindings = <&kp TAB>;
+            key-positions = <31 33>;
+            layers = <0 1 2>;
+        };
+
+        Esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <9 7>;
+            layers = <0 2 1>;
         };
     };
 
