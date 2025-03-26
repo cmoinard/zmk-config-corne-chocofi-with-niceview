@@ -41,6 +41,11 @@
             bindings = <&bootloader>;
             key-positions = <4 28 1 25>;
         };
+
+        Bootloader_right {
+            bindings = <&bootloader>;
+            key-positions = <7 31 10 34>;
+        };
     };
 
     keymap {
