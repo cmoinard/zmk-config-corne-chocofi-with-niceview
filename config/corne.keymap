@@ -36,6 +36,11 @@
             key-positions = <9 7>;
             layers = <0 2 1>;
         };
+
+        Bootloader {
+            bindings = <&bootloader>;
+            key-positions = <4 28 1 25>;
+        };
     };
 
     keymap {
@@ -64,10 +69,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &bt BT_SEL 0   &bt BT_SEL 1   &trans          &trans          &trans             &kp DELETE     &kp HOME  &kp UP_ARROW  &kp END    &kp PAGE_UP    &trans
-&trans  &kp LEFT_META  &kp LEFT_ALT   &kp LEFT_SHIFT  &kp LCTRL       &kp PRINTSCREEN    &kp BACKSPACE  &kp LEFT  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &trans
-&trans  &trans         &kp LC(SLASH)  &kp LC(O)       &kp LC(PERIOD)  &trans             &kp F12        &kp F11   &kp F10       &kp F9     &kp F5         &trans
-                                      &trans          &trans          &trans             &kp SPACE      &trans    &trans
+&none  &bt BT_SEL 0   &bt BT_SEL 1   &none           &none           &none              &kp DELETE     &kp HOME  &kp UP_ARROW  &kp END    &kp PAGE_UP    &none
+&none  &kp LEFT_META  &kp LEFT_ALT   &kp LEFT_SHIFT  &kp LCTRL       &kp PRINTSCREEN    &kp BACKSPACE  &kp LEFT  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
+&none  &mo 6          &kp LC(SLASH)  &kp LC(O)       &kp LC(PERIOD)  &none              &none          &none     &none         &none      &none          &none
+                                     &trans          &trans          &trans             &kp SPACE      &trans    &trans
             >;
         };
 
@@ -110,6 +115,15 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &kp RA(W)       &kp AT_SIGN       &kp LS(N9)         &kp LS(N0)        &kp HASH          &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp GRAVE       &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp BACKSLASH     &kp SLASH         &trans
                         &trans  &trans  &trans    &trans          &trans            &trans
+            >;
+        };
+
+        debug_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F2   &kp F5   &kp F8   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F12  &kp F11  &kp F10  &kp F9  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans   &trans   &trans   &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans   &trans
             >;
         };
     };
