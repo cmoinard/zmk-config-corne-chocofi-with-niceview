@@ -74,7 +74,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &bt BT_SEL 0   &bt BT_SEL 1   &none           &none           &none              &kp DELETE     &kp HOME  &kp UP_ARROW  &kp END    &kp PAGE_UP    &none
+&none  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3    &none              &kp DELETE     &kp HOME  &kp UP_ARROW  &kp END    &kp PAGE_UP    &none
 &none  &kp LEFT_META  &kp LEFT_ALT   &kp LEFT_SHIFT  &kp LCTRL       &kp PRINTSCREEN    &kp BACKSPACE  &kp LEFT  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
 &none  &mo 6          &kp LC(SLASH)  &kp LC(O)       &kp LC(PERIOD)  &none              &none          &none     &none         &none      &none          &none
                                      &trans          &trans          &trans             &kp SPACE      &trans    &trans
