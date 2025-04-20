@@ -22,36 +22,38 @@
         Enter {
             bindings = <&kp ENTER>;
             key-positions = <32 33>;
-            layers = <0 1>;
+            layers = <0 1 2 3 7 8 9 10>;
         };
 
         Tab {
             bindings = <&kp TAB>;
             key-positions = <31 33>;
-            layers = <0 1 2>;
+            layers = <0 1 2 7 8 9>;
         };
 
         Esc {
             bindings = <&kp ESCAPE>;
             key-positions = <9 7>;
-            layers = <0 2 1>;
+            layers = <0 2 1 7 8 9>;
         };
 
         Bootloader {
             bindings = <&bootloader>;
             key-positions = <4 28 1 25>;
+            layers = <7>;
         };
 
-        Bootloader_right {
-            bindings = <&bootloader>;
-            key-positions = <7 31 10 34>;
+        Caps {
+            bindings = <&kp CAPS>;
+            key-positions = <37 40>;
+            layers = <0 7>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        erglace_main {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -59,14 +61,14 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q    &lt 5 W         &lt 3 E           &kp R           &kp T                  &kp Y                 &kp U            &kp I              &kp O           &kp P     &none
+&none  &kp Q    &lt 4 W         &lt 3 E           &kp R           &kp T                  &kp Y                 &kp U            &kp I              &kp O           &kp P     &none
 &none  &kp A    &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F     &kp G                  &kp H                 &mt RCTRL J      &mt RIGHT_SHIFT K  &mt LEFT_ALT L  &kp SEMI  &none
-&none  &lt 4 Z  &kp X           &kp C             &kp V           &kp B                  &kp N                 &kp M            &kp COMMA          &kp DOT         &kp FSLH  &none
+&none  &lt 5 Z  &kp X           &kp C             &kp V           &kp B                  &kp N                 &kp M            &kp COMMA          &kp DOT         &kp FSLH  &none
                                 &mo 1             &sk LEFT_SHIFT  &mt LEFT_META SPACE    &mt RIGHT_META SPACE  &sk RIGHT_SHIFT  &mo 2
             >;
         };
 
-        move_layer {
+        erglace_move {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -76,12 +78,12 @@
             bindings = <
 &none  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3    &none              &kp DELETE     &kp HOME  &kp UP_ARROW  &kp END    &kp PAGE_UP    &none
 &none  &kp LEFT_META  &kp LEFT_ALT   &kp LEFT_SHIFT  &kp LCTRL       &kp PRINTSCREEN    &kp BACKSPACE  &kp LEFT  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
-&none  &mo 6          &kp LC(SLASH)  &kp LC(O)       &kp LC(PERIOD)  &none              &none          &none     &none         &none      &none          &none
+&none  &mo 6          &kp LC(SLASH)  &kp LC(O)       &kp LC(PERIOD)  &to 7              &none          &none     &none         &none      &none          &none
                                      &trans          &trans          &trans             &kp SPACE      &trans    &trans
             >;
         };
 
-        code_layer {
+        erglace_code {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -89,14 +91,14 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp PIPE   &kp RA(W)  &kp RA(E)  &kp AMPERSAND  &kp EXCLAMATION    &kp AT_SIGN  &kp HOME  &kp UP_ARROW       &kp END     &trans  &trans
-&trans  &kp RA(A)  &kp RA(S)  &kp RA(D)  &kp RA(F)      &kp EQUAL          &kp DOLLAR   &kp LEFT  &kp DOWN_ARROW     &kp RIGHT   &trans  &trans
-&trans  &kp LS(Z)  &kp RA(X)  &kp RA(C)  &kp LS(G)      &kp LS(C)          &kp RA(P)    &kp SQT   &kp DOUBLE_QUOTES  &kp PERIOD  &trans  &trans
-                              &trans     &trans         &kp SPACE          &trans       &trans    &trans
+&trans  &kp PIPE   &kp RA(W)  &kp RA(E)  &kp AMPERSAND  &kp LS(W)    &kp AT_SIGN  &kp HOME  &kp UP_ARROW       &kp END    &trans  &trans
+&trans  &kp RA(A)  &kp RA(S)  &kp RA(D)  &kp RA(F)      &kp EQUAL    &kp DOLLAR   &kp LEFT  &kp DOWN_ARROW     &kp RIGHT  &trans  &trans
+&trans  &kp LS(Z)  &kp RA(X)  &kp RA(C)  &kp LS(G)      &kp LS(C)    &kp RA(P)    &kp SQT   &kp DOUBLE_QUOTES  &kp Z      &trans  &trans
+                              &trans     &trans         &kp SPACE    &trans       &trans    &trans
             >;
         };
 
-        digits_layer {
+        erglace_digits {
             bindings = <
 &trans  &kp K_MUTE  &kp C_VOL_DN  &trans  &kp C_VOLUME_UP   &trans             &kp RA(J)  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp RA(K)  &trans
 &trans  &trans      &trans        &trans  &kp K_PLAY_PAUSE  &kp LOCKING_NUM    &kp RA(L)  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_N0  &trans
@@ -105,16 +107,7 @@
             >;
         };
 
-        f_keys_layer {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        symbols_layer {
+        erglace_symbols {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &none      &kp PERCENT       &kp LS(NUMBER_1)   &kp LS(NUMBER_4)  &kp LS(NUMBER_6)  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &none      &kp AT_SIGN       &kp LS(N9)         &kp LS(N0)        &kp HASH          &trans
@@ -123,12 +116,66 @@
             >;
         };
 
-        debug_layer {
+        f_keys {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        debug {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F2   &kp F5   &kp F8   &kp F4  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F12  &kp F11  &kp F10  &kp F9  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F3   &trans   &trans   &trans  &trans
                         &trans  &trans  &trans    &trans  &trans   &trans
+            >;
+        };
+
+        ergol_main {
+            bindings = <
+&none  &kp Q    &lt 11 W        &lt 10 E          &kp R           &kp T                  &kp Y                 &kp U            &kp I              &kp O           &kp P     &none
+&none  &kp A    &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F     &kp G                  &kp H                 &mt RCTRL J      &mt RIGHT_SHIFT K  &mt LEFT_ALT L  &kp SEMI  &none
+&none  &lt 6 Z  &kp X           &kp C             &kp V           &kp B                  &kp N                 &kp M            &kp COMMA          &kp DOT         &kp FSLH  &none
+                                &mo 8             &sk LEFT_SHIFT  &mt LEFT_META SPACE    &mt RIGHT_META SPACE  &sk RIGHT_SHIFT  &mo 9
+            >;
+        };
+
+        ergol_move {
+            bindings = <
+&none  &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &none              &kp DELETE     &kp HOME  &kp UP_ARROW  &kp END    &kp PAGE_UP    &none
+&none  &kp LEFT_META  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL     &kp PRINTSCREEN    &kp BACKSPACE  &kp LEFT  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
+&none  &mo 7          &kp LC(X)     &kp LC(W)       &kp LC(V)     &to 0              &none          &none     &none         &none      &none          &none
+                                    &trans          &trans        &trans             &kp SPACE      &trans    &trans
+            >;
+        };
+
+        ergol_code {
+            bindings = <
+&trans  &kp PIPE   &kp RA(W)  &kp RA(E)  &kp AMPERSAND  &kp LS(O)    &kp RA(Y)   &kp HOME  &kp UP_ARROW       &kp END    &trans  &trans
+&trans  &kp RA(A)  &kp RA(S)  &kp RA(D)  &kp RA(F)      &kp EQUAL    &kp DOLLAR  &kp LEFT  &kp DOWN_ARROW     &kp RIGHT  &trans  &trans
+&trans  &kp LS(N)  &kp RA(X)  &kp RA(C)  &kp LS(SEMI)   &kp LS(C)    &kp RA(P)   &kp SQT   &kp DOUBLE_QUOTES  &kp N      &trans  &trans
+                              &trans     &trans         &kp SPACE    &trans      &trans    &trans
+            >;
+        };
+
+        ergol_digits {
+            bindings = <
+&trans  &kp K_MUTE  &kp C_VOL_DN  &trans  &kp C_VOLUME_UP   &trans             &kp RA(J)  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp RA(K)  &trans
+&trans  &trans      &trans        &trans  &kp K_PLAY_PAUSE  &kp LOCKING_NUM    &kp RA(L)  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_N0  &trans
+&trans  &trans      &trans        &trans  &trans            &trans             &kp RA(I)  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp N      &trans
+                                  &trans  &trans            &trans             &trans     &trans     &trans
+            >;
+        };
+
+        ergol_symbols {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &none      &kp PERCENT       &kp LS(NUMBER_1)   &kp LS(NUMBER_4)  &kp LS(NUMBER_6)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &none      &kp RA(Y)         &kp LS(N2)         &kp LS(N3)        &kp RA(B)         &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp GRAVE  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp BACKSLASH     &kp RA(L)         &trans
+                        &trans  &trans  &trans    &trans     &trans            &trans
             >;
         };
     };
