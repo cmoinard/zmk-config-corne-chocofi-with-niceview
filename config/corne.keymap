@@ -138,7 +138,7 @@
             bindings = <
 &none  &kp Q    &lt 11 W        &lt 10 E          &kp R           &kp T                  &kp Y                 &kp U            &kp I              &kp O           &kp P     &none
 &none  &kp A    &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F     &kp G                  &kp H                 &mt RCTRL J      &mt RIGHT_SHIFT K  &mt LEFT_ALT L  &kp SEMI  &none
-&none  &lt 6 Z  &kp X           &kp C             &kp V           &kp B                  &kp N                 &kp M            &kp COMMA          &kp DOT         &kp FSLH  &none
+&none  &lt 5 Z  &kp X           &kp C             &kp V           &kp B                  &kp N                 &kp M            &kp COMMA          &kp DOT         &kp FSLH  &none
                                 &mo 8             &sk LEFT_SHIFT  &mt LEFT_META SPACE    &mt RIGHT_META SPACE  &sk RIGHT_SHIFT  &mo 9
             >;
         };
@@ -147,7 +147,7 @@
             bindings = <
 &none  &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &none              &kp DELETE     &kp HOME  &kp UP_ARROW  &kp END    &kp PAGE_UP    &none
 &none  &kp LEFT_META  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL     &kp PRINTSCREEN    &kp BACKSPACE  &kp LEFT  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
-&none  &mo 7          &kp LC(X)     &kp LC(W)       &kp LC(V)     &to 0              &none          &none     &none         &none      &none          &none
+&none  &mo 6          &kp LC(X)     &kp LC(W)       &kp LC(V)     &to 0              &none          &none     &none         &none      &none          &none
                                     &trans          &trans        &trans             &kp SPACE      &trans    &trans
             >;
         };
