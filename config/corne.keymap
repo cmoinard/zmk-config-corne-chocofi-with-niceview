@@ -22,31 +22,31 @@
         Enter {
             bindings = <&kp ENTER>;
             key-positions = <32 33>;
-            layers = <5 6 7 8>;
+            layers = <5 6 7 8 0 1 2 3>;
         };
 
         Tab {
             bindings = <&kp TAB>;
             key-positions = <31 33>;
-            layers = <5 6 7>;
+            layers = <5 6 7 0 1 2>;
         };
 
         Esc {
             bindings = <&kp ESCAPE>;
             key-positions = <9 7>;
-            layers = <5 6 7>;
+            layers = <5 6 7 0 2 1>;
         };
 
         Bootloader {
             bindings = <&bootloader>;
             key-positions = <4 28 1 25>;
-            layers = <5>;
+            layers = <5 0>;
         };
 
         Caps {
             bindings = <&kp CAPS>;
             key-positions = <37 40>;
-            layers = <5>;
+            layers = <5 0>;
         };
     };
 
@@ -73,18 +73,18 @@
 
         erglace_code {
             bindings = <
-&trans  &kp PIPE   &kp RA(W)  &kp RA(E)  &kp AMPERSAND   &kp LS(W)    &kp RA(Y)   &kp HOME  &kp UP_ARROW       &kp END    &trans  &trans
-&trans  &kp RA(A)  &kp RA(S)  &kp RA(D)  &kp RA(F)       &kp EQUAL    &kp DOLLAR  &kp LEFT  &kp DOWN_ARROW     &kp RIGHT  &trans  &trans
-&trans  &kp LS(Q)  &kp RA(X)  &kp RA(C)  &kp LS(PERIOD)  &kp LS(C)    &kp RA(P)   &kp SQT   &kp DOUBLE_QUOTES  &kp Q      &trans  &trans
-                              &trans     &trans          &kp SPACE    &trans      &trans    &trans
+&trans  &kp PIPE   &kp RA(W)  &kp RA(E)  &kp AMPERSAND  &kp LS(W)    &kp RA(Y)   &kp HOME  &kp UP_ARROW       &kp END    &trans  &trans
+&trans  &kp RA(A)  &kp RA(S)  &kp RA(D)  &kp RA(F)      &kp EQUAL    &kp DOLLAR  &kp LEFT  &kp DOWN_ARROW     &kp RIGHT  &trans  &trans
+&trans  &kp LS(Q)  &kp RA(X)  &kp RA(C)  &kp LS(V)      &kp LS(C)    &kp RA(P)   &kp SQT   &kp DOUBLE_QUOTES  &kp Q      &trans  &trans
+                              &trans     &trans         &kp SPACE    &trans      &trans    &trans
             >;
         };
 
         erglace_digits {
             bindings = <
-&trans  &kp K_MUTE  &kp C_VOL_DN  &trans  &kp C_VOLUME_UP   &trans             &kp RA(J)  &kp N7  &kp N8  &kp N9  &kp RA(K)  &trans
-&trans  &none       &none         &trans  &kp C_PLAY_PAUSE  &kp LOCKING_NUM    &kp RA(L)  &kp N4  &kp N5  &kp N6  &kp RA(I)  &trans
-&trans  &none       &trans        &trans  &trans            &trans             &none      &kp N1  &kp N2  &kp N3  &kp N      &trans
+&trans  &kp K_MUTE  &kp C_VOL_DN  &trans  &kp C_VOLUME_UP   &trans             &kp RA(I)  &kp N7  &kp N8  &kp N9  &kp RA(J)  &trans
+&trans  &trans      &trans        &trans  &kp C_PLAY_PAUSE  &kp LOCKING_NUM    &kp RA(L)  &kp N4  &kp N5  &kp N6  &kp RA(K)  &trans
+&trans  &trans      &trans        &trans  &trans            &trans             &kp V      &kp N1  &kp N2  &kp N3  &kp Q      &trans
                                   &trans  &trans            &trans             &trans     &trans  &kp N0
             >;
         };
@@ -92,7 +92,7 @@
         erglace_symbols {
             bindings = <
 &to 5   &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 2    &none      &kp PERCENT       &kp LS(NUMBER_1)   &kp LS(NUMBER_4)  &kp LS(NUMBER_6)  &trans
-&trans  &trans  &trans  &trans  &bt BT_SEL 1  &bt BT_SEL 3    &none      &kp RA(Y)         &kp LS(N9)         &kp LS(N0)        &kp LS(N9)        &trans
+&trans  &trans  &trans  &trans  &bt BT_SEL 1  &bt BT_SEL 3    &none      &kp RA(Y)         &kp LS(N9)         &kp LS(N0)        &kp LS(NUMBER_3)  &trans
 &trans  &trans  &trans  &trans  &trans        &trans          &kp GRAVE  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp BACKSLASH     &kp RA(L)         &trans
                         &trans  &trans        &trans          &trans     &trans            &trans
             >;
