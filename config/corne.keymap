@@ -22,31 +22,31 @@
         Enter {
             bindings = <&kp ENTER>;
             key-positions = <32 33>;
-            layers = <0 2 3 4>;
+            layers = <0 2 3 4 1>;
         };
 
         Tab {
             bindings = <&kp TAB>;
             key-positions = <31 33>;
-            layers = <0 2 3>;
+            layers = <0 2 3 1>;
         };
 
         Esc {
             bindings = <&kp ESCAPE>;
             key-positions = <9 7>;
-            layers = <0 3 2>;
+            layers = <0 3 2 1>;
         };
 
         Bootloader {
             bindings = <&bootloader>;
             key-positions = <4 28 1 25>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         Caps {
             bindings = <&kp CAPS>;
             key-positions = <37 40>;
-            layers = <0>;
+            layers = <0 1>;
         };
     };
 
