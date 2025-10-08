@@ -5,7 +5,6 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 &mt {
@@ -55,7 +54,7 @@
 
         main {
             bindings = <
-&none  &kp Q  &kp W           &lt 4 E           &lt 5 R         &kp T                  &kp Y                 &kp U            &kp I              &kp O           &kp P     &none
+&none  &kp Q  &kp W           &lt 4 E           &lt 6 R         &kp T                  &kp Y                 &kp U            &kp I              &kp O           &kp P     &none
 &none  &kp A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F     &kp G                  &kp H                 &mt RCTRL J      &mt RIGHT_SHIFT K  &mt LEFT_ALT L  &kp SEMI  &none
 &none  &kp Z  &kp X           &kp C             &kp V           &kp B                  &kp N                 &kp M            &kp COMMA          &kp DOT         &kp FSLH  &none
                               &mo 2             &sk LEFT_SHIFT  &mt LEFT_META SPACE    &mt RIGHT_META SPACE  &sk RIGHT_SHIFT  &mo 3
@@ -64,28 +63,28 @@
 
         main_hummingbird {
             bindings = <
-&none  &kp Q  &kp W           &kp E             &kp R           &kp T                  &kp Y                 &kp U            &kp I              &kp O           &kp P     &none
+&none  &kp Q  &kp W           &kp E             &kp R           &none                  &none                 &kp U            &kp I              &kp O           &kp P     &none
 &none  &kp A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F     &kp G                  &kp H                 &mt RCTRL J      &mt RIGHT_SHIFT K  &mt LEFT_ALT L  &kp SEMI  &none
-&none  &mo 4  &kp X           &kp C             &kp V           &mo 5                  &none                 &kp M            &kp COMMA          &kp DOT         &none     &none
+&none  &sl 5  &kp X           &kp C             &kp V           &kp B                  &kp N                 &kp M            &kp COMMA          &kp DOT         &sl 7     &none
                               &mo 2             &sk LEFT_SHIFT  &mt LEFT_META SPACE    &mt RIGHT_META SPACE  &sk RIGHT_SHIFT  &mo 3
             >;
         };
 
         move {
             bindings = <
-&none  &none          &to 1         &to 0           &none           &none              &kp DELETE     &kp HOME  &kp UP_ARROW  &kp END    &kp PAGE_UP    &none
-&none  &kp LEFT_META  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL       &kp PRINTSCREEN    &kp BACKSPACE  &kp LEFT  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
-&none  &mo 6          &kp LC(Q)     &kp LC(O)       &kp LC(PERIOD)  &none              &none          &none     &none         &none      &none          &none
-                                    &trans          &trans          &trans             &kp SPACE      &trans    &trans
+&none  &none          &to 1         &to 0           &none           &none              &kp DELETE     &kp HOME   &kp UP_ARROW  &kp END    &kp PAGE_UP    &none
+&none  &kp LEFT_META  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL       &kp PRINTSCREEN    &kp BACKSPACE  &kp LEFT   &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
+&none  &mo 8          &kp LC(Q)     &kp LC(O)       &kp LC(PERIOD)  &none              &none          &kp RC(W)  &kp RC(X)     &kp RC(T)  &none          &none
+                                    &trans          &trans          &trans             &kp SPACE      &trans     &trans
             >;
         };
 
         code {
             bindings = <
-&trans  &kp PIPE   &kp RA(W)  &kp RA(E)  &kp AMPERSAND  &kp LS(W)    &kp RA(Y)         &kp HOME  &kp UP_ARROW       &kp END    &trans  &trans
-&trans  &kp RA(A)  &kp RA(S)  &kp RA(D)  &kp RA(F)      &kp EQUAL    &kp LS(NUMBER_4)  &kp LEFT  &kp DOWN_ARROW     &kp RIGHT  &trans  &trans
-&trans  &kp LS(B)  &kp RA(X)  &kp RA(C)  &kp LS(G)      &kp LS(C)    &kp RA(P)         &kp SQT   &kp DOUBLE_QUOTES  &kp Q      &trans  &trans
-                              &trans     &trans         &kp SPACE    &trans            &trans    &trans
+&trans  &kp PIPE   &kp RA(W)  &kp RA(E)  &kp AMPERSAND  &kp LS(W)    &none      &kp HOME      &kp UP_ARROW    &kp END    &trans            &trans
+&trans  &kp RA(A)  &kp RA(S)  &kp RA(D)  &kp RA(F)      &kp EQUAL    &kp RA(L)  &kp LEFT      &kp DOWN_ARROW  &kp RIGHT  &kp RA(Y)         &trans
+&trans  &kp LS(B)  &kp RA(X)  &kp RA(C)  &kp LS(G)      &kp LS(C)    &kp RA(H)  &kp RA(SEMI)  &kp RA(O)       &kp RA(P)  &kp LS(NUMBER_4)  &trans
+                              &trans     &trans         &kp SPACE    &trans     &trans        &trans
             >;
         };
 
@@ -98,12 +97,30 @@
             >;
         };
 
+        digits_hummingbird {
+            bindings = <
+&trans  &trans  &trans      &trans             &trans           &trans             &kp RA(I)  &kp N7  &kp N8  &kp N9  &kp RA(J)  &trans
+&trans  &trans  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LOCKING_NUM    &kp RA(L)  &kp N4  &kp N5  &kp N6  &kp RA(K)  &trans
+&trans  &trans  &trans      &trans             &kp C_PP         &trans             &kp G      &kp N1  &kp N2  &kp N3  &kp B      &trans
+                            &trans             &trans           &trans             &trans     &trans  &kp N0
+            >;
+        };
+
         symbols {
             bindings = <
-&trans  &trans        &trans        &trans  &trans  &trans    &none      &kp PERCENT       &kp LS(NUMBER_1)   &kp LS(NUMBER_4)  &kp LS(NUMBER_6)  &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans    &none      &kp RA(Y)         &kp LS(N9)         &kp LS(N0)        &kp LS(NUMBER_3)  &trans
-&trans  &trans        &trans        &trans  &trans  &trans    &kp GRAVE  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp BACKSLASH     &kp RA(L)         &trans
-                                    &trans  &trans  &trans    &trans     &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &none      &kp RA(Z)     &kp LS(NUMBER_1)  &kp RA(T)   &kp RA(W)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp RA(L)  &kp RA(B)     &kp LS(N9)        &kp LS(N0)  &kp RA(Y)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp RA(H)  &kp RA(SEMI)  &kp RA(O)         &kp RA(P)   &kp RA(R)  &trans
+                        &trans  &trans  &trans    &trans     &trans        &trans
+            >;
+        };
+
+        symbols_hummingbird {
+            bindings = <
+&trans  &kp RA(W)  &kp RA(T)   &kp LS(NUMBER_1)  &kp RA(Z)     &none        &none   &none   &none   &none  &none  &trans
+&trans  &kp RA(Y)  &kp LS(N9)  &kp LS(N0)        &kp RA(B)     &kp RA(L)    &none   &none   &none   &none  &none  &trans
+&trans  &kp RA(R)  &kp RA(P)   &kp RA(O)         &kp RA(SEMI)  &kp RA(H)    &none   &none   &none   &none  &none  &trans
+                               &trans            &trans        &trans       &trans  &trans  &trans
             >;
         };
 
