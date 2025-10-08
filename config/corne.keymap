@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 &mt {
@@ -46,6 +47,17 @@
             bindings = <&kp CAPS>;
             key-positions = <37 40>;
             layers = <0 1>;
+        };
+
+        Bluetooth_1 {
+            bindings = <&bt BT_SEL 1>;
+            key-positions = <6 10 1 5>;
+            layers = <0 1>;
+        };
+
+        Bluetooth_2 {
+            bindings = <&bt BT_SEL 2>;
+            key-positions = <1 5 22 18>;
         };
     };
 
