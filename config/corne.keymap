@@ -58,6 +58,7 @@
         Bluetooth_2 {
             bindings = <&bt BT_SEL 2>;
             key-positions = <1 5 22 18>;
+            layers = <1 0>;
         };
     };
 
