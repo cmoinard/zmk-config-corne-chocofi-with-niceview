@@ -50,13 +50,13 @@
         };
 
         Bluetooth_1 {
-            bindings = <&bt BT_SEL 1>;
+            bindings = <&bt BT_SEL 0>;
             key-positions = <6 10 1 5>;
             layers = <0 1>;
         };
 
         Bluetooth_2 {
-            bindings = <&bt BT_SEL 2>;
+            bindings = <&bt BT_SEL 1>;
             key-positions = <1 5 22 18>;
             layers = <1 0>;
         };
@@ -85,7 +85,7 @@
 
         move {
             bindings = <
-&none  &bt BT_SEL 1   &to 1         &to 0           &bt BT_SEL 2    &none              &kp DELETE     &kp HOME   &kp UP_ARROW  &kp END    &kp PAGE_UP    &none
+&none  &bt BT_SEL 0   &to 1         &to 0           &bt BT_SEL 1    &none              &kp DELETE     &kp HOME   &kp UP_ARROW  &kp END    &kp PAGE_UP    &none
 &none  &kp LEFT_META  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL       &kp PRINTSCREEN    &kp BACKSPACE  &kp LEFT   &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
 &none  &mo 8          &kp LC(Q)     &kp LC(O)       &kp LC(PERIOD)  &none              &none          &kp RC(Z)  &kp RC(X)     &kp RC(T)  &none          &none
                                     &trans          &trans          &trans             &kp SPACE      &trans     &trans
