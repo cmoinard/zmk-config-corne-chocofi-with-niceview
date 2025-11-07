@@ -49,27 +49,39 @@
             layers = <0 1>;
         };
 
-        Bluetooth_1 {
+        Bt1_Select {
             bindings = <&bt BT_SEL 0>;
             key-positions = <6 10 1 5>;
             layers = <0 1>;
         };
 
-        Bluetooth_2 {
+        Bt2_Select {
             bindings = <&bt BT_SEL 1>;
             key-positions = <1 5 22 18>;
             layers = <1 0>;
         };
 
-        Bluetooth3 {
+        Bt3_Select {
             bindings = <&bt BT_SEL 2>;
             key-positions = <1 5 30 34>;
             layers = <1 0>;
         };
 
-        BluetoothReset {
-            bindings = <&bt BT_CLR_ALL>;
-            key-positions = <1 5 6 30>;
+        Bt1_Disconnect {
+            bindings = <&bt BT_DISC 0>;
+            key-positions = <25 29 6 10>;
+            layers = <1 0>;
+        };
+
+        Bt2_Disconnect {
+            bindings = <&bt BT_DISC 1>;
+            key-positions = <25 29 18 22>;
+            layers = <1 0>;
+        };
+
+        Bt3_Disconnect {
+            bindings = <&bt BT_DISC 2>;
+            key-positions = <25 29 34 30>;
             layers = <1 0>;
         };
     };
