@@ -60,6 +60,18 @@
             key-positions = <1 5 22 18>;
             layers = <1 0>;
         };
+
+        Bluetooth3 {
+            bindings = <&bt BT_SEL 2>;
+            key-positions = <1 5 30 34>;
+            layers = <1 0>;
+        };
+
+        BluetoothReset {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <1 5 6 30>;
+            layers = <1 0>;
+        };
     };
 
     keymap {
