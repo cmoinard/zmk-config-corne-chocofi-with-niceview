@@ -22,19 +22,19 @@
         Enter {
             bindings = <&kp ENTER>;
             key-positions = <32 33>;
-            layers = <0 2 3 4 1>;
+            layers = <0 3 4 2 1>;
         };
 
         Tab {
             bindings = <&kp TAB>;
             key-positions = <31 33>;
-            layers = <0 2 3 1>;
+            layers = <0 3 4 1>;
         };
 
         Esc {
             bindings = <&kp ESCAPE>;
             key-positions = <9 7>;
-            layers = <0 3 2 1>;
+            layers = <0 4 3 1>;
         };
 
         Bootloader {
@@ -48,42 +48,6 @@
             key-positions = <37 40>;
             layers = <0 1>;
         };
-
-        Bt1_Select {
-            bindings = <&bt BT_SEL 0>;
-            key-positions = <6 10 1 5>;
-            layers = <0 1>;
-        };
-
-        Bt2_Select {
-            bindings = <&bt BT_SEL 1>;
-            key-positions = <1 5 22 18>;
-            layers = <1 0>;
-        };
-
-        Bt3_Select {
-            bindings = <&bt BT_SEL 2>;
-            key-positions = <1 5 30 34>;
-            layers = <1 0>;
-        };
-
-        Bt1_Disconnect {
-            bindings = <&bt BT_DISC 0>;
-            key-positions = <25 29 6 10>;
-            layers = <1 0>;
-        };
-
-        Bt2_Disconnect {
-            bindings = <&bt BT_DISC 1>;
-            key-positions = <25 29 18 22>;
-            layers = <1 0>;
-        };
-
-        Bt3_Disconnect {
-            bindings = <&bt BT_DISC 2>;
-            key-positions = <25 29 34 30>;
-            layers = <1 0>;
-        };
     };
 
     keymap {
@@ -91,10 +55,10 @@
 
         main {
             bindings = <
-&none  &kp Q  &kp W           &lt 4 E           &lt 6 R         &kp T                  &kp Y                 &kp U            &kp I              &kp O           &kp P     &none
+&none  &kp Q  &kp W           &lt 2 E           &lt 6 R         &kp T                  &kp Y                 &kp U            &kp I              &kp O           &kp P     &none
 &none  &kp A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F     &kp G                  &kp H                 &mt RCTRL J      &mt RIGHT_SHIFT K  &mt LEFT_ALT L  &kp SEMI  &none
 &none  &kp Z  &kp X           &kp C             &kp V           &kp B                  &kp N                 &kp M            &kp COMMA          &kp DOT         &kp FSLH  &none
-                              &mo 2             &sk LEFT_SHIFT  &mt LEFT_META SPACE    &mt RIGHT_META SPACE  &sk RIGHT_SHIFT  &mo 3
+                              &mo 3             &sk LEFT_SHIFT  &mt LEFT_META SPACE    &mt RIGHT_META SPACE  &sk RIGHT_SHIFT  &mo 4
             >;
         };
 
@@ -103,13 +67,22 @@
 &none  &kp Q  &kp W           &kp E             &kp R           &none                  &none                 &kp U            &kp I              &kp O           &kp P     &none
 &none  &kp A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F     &kp G                  &kp H                 &mt RCTRL J      &mt RIGHT_SHIFT K  &mt LEFT_ALT L  &kp SEMI  &none
 &none  &sl 5  &kp X           &kp C             &kp V           &kp B                  &kp N                 &kp M            &kp COMMA          &kp DOT         &sl 7     &none
-                              &mo 2             &sk LEFT_SHIFT  &mt LEFT_META SPACE    &mt RIGHT_META SPACE  &sk RIGHT_SHIFT  &mo 3
+                              &mo 3             &sk LEFT_SHIFT  &mt LEFT_META SPACE    &mt RIGHT_META SPACE  &sk RIGHT_SHIFT  &mo 4
+            >;
+        };
+
+        digits {
+            bindings = <
+&trans  &kp K_MUTE  &kp C_VOL_DN  &trans  &kp C_VOLUME_UP   &trans             &kp RA(I)  &kp N7  &kp N8  &kp N9  &kp RA(J)  &trans
+&trans  &trans      &trans        &trans  &kp C_PLAY_PAUSE  &kp LOCKING_NUM    &kp RA(L)  &kp N4  &kp N5  &kp N6  &kp RA(K)  &trans
+&trans  &trans      &trans        &trans  &trans            &trans             &kp G      &kp N1  &kp N2  &kp N3  &kp B      &trans
+                                  &trans  &trans            &trans             &trans     &trans  &kp N0
             >;
         };
 
         move {
             bindings = <
-&none  &bt BT_SEL 0   &to 1         &to 0           &bt BT_SEL 1    &none              &kp DELETE     &kp HOME   &kp UP_ARROW  &kp END    &kp PAGE_UP    &none
+&none  &none          &to 1         &to 0           &none           &none              &kp DELETE     &kp HOME   &kp UP_ARROW  &kp END    &kp PAGE_UP    &none
 &none  &kp LEFT_META  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL       &kp PRINTSCREEN    &kp BACKSPACE  &kp LEFT   &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
 &none  &mo 8          &kp LC(Q)     &kp LC(O)       &kp LC(PERIOD)  &none              &none          &kp RC(Z)  &kp RC(X)     &kp RC(T)  &none          &none
                                     &trans          &trans          &trans             &kp SPACE      &trans     &trans
@@ -122,15 +95,6 @@
 &trans  &kp RA(A)  &kp RA(S)  &kp RA(D)  &kp RA(F)      &kp EQUAL    &kp RA(L)  &kp LEFT      &kp DOWN_ARROW  &kp RIGHT  &kp RA(Y)         &trans
 &trans  &kp LS(B)  &kp RA(X)  &kp RA(C)  &kp LS(G)      &kp LS(C)    &kp RA(H)  &kp RA(SEMI)  &kp RA(O)       &kp RA(P)  &kp LS(NUMBER_4)  &trans
                               &trans     &trans         &kp SPACE    &trans     &trans        &trans
-            >;
-        };
-
-        digits {
-            bindings = <
-&trans  &kp K_MUTE  &kp C_VOL_DN  &trans  &kp C_VOLUME_UP   &trans             &kp RA(I)  &kp N7  &kp N8  &kp N9  &kp RA(J)  &trans
-&trans  &trans      &trans        &trans  &kp C_PLAY_PAUSE  &kp LOCKING_NUM    &kp RA(L)  &kp N4  &kp N5  &kp N6  &kp RA(K)  &trans
-&trans  &trans      &trans        &trans  &trans            &trans             &kp G      &kp N1  &kp N2  &kp N3  &kp B      &trans
-                                  &trans  &trans            &trans             &trans     &trans  &kp N0
             >;
         };
 
@@ -163,10 +127,10 @@
 
         f_keys {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F2   &kp F5   &kp F8   &kp F4  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F12  &kp F11  &kp F10  &kp F9  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F3   &kp F6   &kp F7   &kp F1  &trans
-                        &trans  &trans  &trans    &trans  &trans   &trans
+&trans  &trans  &trans  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2    &trans  &kp F2   &kp F5   &kp F8   &kp F4  &trans
+&trans  &trans  &trans  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2     &trans  &kp F12  &kp F11  &kp F10  &kp F9  &trans
+&trans  &trans  &trans  &trans         &trans         &trans           &trans  &kp F3   &kp F6   &kp F7   &kp F1  &trans
+                        &trans         &trans         &trans           &trans  &trans   &trans
             >;
         };
     };
