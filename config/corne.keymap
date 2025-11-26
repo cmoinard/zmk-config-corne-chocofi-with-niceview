@@ -82,10 +82,10 @@
 
         move {
             bindings = <
-&none  &none          &to 1                &to 0           &none           &none              &kp DELETE     &kp HOME   &kp UP_ARROW  &kp END    &kp PAGE_UP    &none
-&none  &kp LEFT_META  &kp LEFT_ALT         &kp LEFT_SHIFT  &kp LCTRL       &kp PRINTSCREEN    &kp BACKSPACE  &kp LEFT   &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
-&none  &mo 8          &kp LC(EXCLAMATION)  &kp LC(O)       &kp LC(PERIOD)  &none              &none          &kp RC(B)  &kp RC(X)     &kp RC(T)  &none          &none
-                                           &trans          &trans          &trans             &kp SPACE      &trans     &trans
+&none  &none          &to 1          &to 0           &none           &none              &kp DELETE     &kp HOME   &kp UP_ARROW  &kp END    &kp PAGE_UP    &none
+&none  &kp LEFT_META  &kp LEFT_ALT   &kp LEFT_SHIFT  &kp LCTRL       &kp PRINTSCREEN    &kp BACKSPACE  &kp LEFT   &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
+&none  &mo 8          &kp LC(SLASH)  &kp LC(O)       &kp LC(PERIOD)  &none              &none          &kp RC(B)  &kp RC(X)     &kp RC(T)  &none          &none
+                                     &trans          &trans          &trans             &kp SPACE      &trans     &trans
             >;
         };
 
