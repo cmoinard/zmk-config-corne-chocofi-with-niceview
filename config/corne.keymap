@@ -84,7 +84,7 @@
             bindings = <
 &none  &none          &to 1         &to 0           &none           &none              &kp DELETE     &kp HOME   &kp UP_ARROW  &kp END    &kp PAGE_UP    &none
 &none  &kp LEFT_META  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL       &kp PRINTSCREEN    &kp BACKSPACE  &kp LEFT   &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
-&none  &mo 8          &kp LC(Q)     &kp LC(O)       &kp LC(PERIOD)  &none              &none          &kp RC(B)  &kp RC(X)     &kp RC(T)  &none          &none
+&none  &mo 8          &kp LC(Q)     &kp LC(O)       &kp LC(PERIOD)  &none              &none          &kp RC(B)  &kp RC(G)     &kp RC(T)  &none          &none
                                     &trans          &trans          &trans             &kp SPACE      &trans     &trans
             >;
         };
@@ -93,7 +93,7 @@
             bindings = <
 &trans  &kp PIPE   &kp RA(W)  &kp RA(E)  &kp AMPERSAND  &kp LS(W)    &none      &kp HOME      &kp UP_ARROW    &kp END    &trans            &trans
 &trans  &kp RA(A)  &kp RA(S)  &kp RA(D)  &kp RA(F)      &kp EQUAL    &kp RA(L)  &kp LEFT      &kp DOWN_ARROW  &kp RIGHT  &kp RA(Y)         &trans
-&trans  &kp LS(B)  &kp RA(X)  &kp RA(C)  &kp LS(G)      &kp LS(C)    &kp RA(H)  &kp RA(SEMI)  &kp RA(O)       &kp RA(P)  &kp LS(NUMBER_4)  &trans
+&trans  &kp LS(B)  &kp RA(X)  &kp RA(C)  &kp LS(X)      &kp LS(C)    &kp RA(H)  &kp RA(SEMI)  &kp RA(O)       &kp RA(P)  &kp LS(NUMBER_4)  &trans
                               &trans     &trans         &kp SPACE    &trans     &trans        &trans
             >;
         };
