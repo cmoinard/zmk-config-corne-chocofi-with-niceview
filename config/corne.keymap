@@ -100,10 +100,10 @@
 
         digit_operations {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp X             &kp RA(I)         &kp Z       &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp RA(J)         &kp RA(K)         &kp RA(L)   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_4)  &kp LS(N5)  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp DELETE     &kp X             &kp RA(I)         &kp Z       &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp BACKSPACE  &kp RA(J)         &kp RA(K)         &kp RA(L)   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans         &kp LS(NUMBER_1)  &kp LS(NUMBER_4)  &kp LS(N5)  &trans  &trans
+                        &trans  &trans  &trans    &trans         &trans            &trans
             >;
         };
 
