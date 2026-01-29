@@ -75,7 +75,7 @@
             bindings = <
 &none  &none          &none         &none           &none           &none              &kp DELETE     &kp HOME   &kp UP_ARROW  &kp END    &kp PAGE_UP    &none
 &none  &kp LEFT_META  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL       &kp PRINTSCREEN    &kp BACKSPACE  &kp LEFT   &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
-&none  &mo 8          &kp LC(Q)     &kp LC(O)       &kp LC(PERIOD)  &none              &none          &kp RC(B)  &kp RC(G)     &kp RC(T)  &none          &none
+&none  &mo 8          &kp LC(P)     &kp LC(O)       &kp LC(PERIOD)  &none              &none          &kp RC(B)  &kp RC(G)     &kp RC(T)  &none          &none
                                     &trans          &trans          &trans             &kp SPACE      &trans     &trans
             >;
         };
