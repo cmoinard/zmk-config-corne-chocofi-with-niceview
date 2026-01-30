@@ -75,7 +75,7 @@
             bindings = <
 &none  &none          &none         &none           &none           &none              &kp DELETE     &kp HOME   &kp UP_ARROW  &kp END    &kp PAGE_UP    &none
 &none  &kp LEFT_META  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL       &kp PRINTSCREEN    &kp BACKSPACE  &kp LEFT   &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
-&none  &mo 8          &kp LC(P)     &kp LC(O)       &kp LC(PERIOD)  &none              &none          &kp RC(Q)  &kp RC(G)     &kp RC(B)  &none          &none
+&none  &mo 8          &kp LC(P)     &kp LC(O)       &kp LC(PERIOD)  &none              &none          &kp RC(Q)  &kp RC(X)     &kp RC(B)  &none          &none
                                     &trans          &trans          &trans             &kp SPACE      &trans     &trans
             >;
         };
@@ -93,14 +93,14 @@
             bindings = <
 &trans  &trans  &trans      &trans             &trans           &trans             &kp RA(I)  &kp N7  &kp N8  &kp N9  &kp RA(J)  &trans
 &trans  &trans  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LOCKING_NUM    &kp RA(L)  &kp N4  &kp N5  &kp N6  &kp RA(K)  &trans
-&trans  &trans  &trans      &trans             &kp C_PP         &trans             &kp X      &kp N1  &kp N2  &kp N3  &kp Z      &trans
+&trans  &trans  &trans      &trans             &kp C_PP         &trans             &kp G      &kp N1  &kp N2  &kp N3  &kp Z      &trans
                             &mo 5              &trans           &trans             &trans     &trans  &kp N0
             >;
         };
 
         digit_operations {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp DELETE     &kp X             &kp RA(I)         &kp Z       &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp DELETE     &kp G             &kp RA(I)         &kp Z       &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp BACKSPACE  &kp RA(J)         &kp RA(K)         &kp RA(L)   &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans         &kp LS(NUMBER_1)  &kp LS(NUMBER_4)  &kp LS(N5)  &trans  &trans
                         &trans  &trans  &trans    &trans         &trans            &trans
