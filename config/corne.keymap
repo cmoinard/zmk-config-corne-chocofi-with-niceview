@@ -66,7 +66,7 @@
             bindings = <
 &none  &none          &none         &none           &none           &none              &kp DELETE     &kp HOME   &kp UP_ARROW  &kp END    &kp PAGE_UP    &none
 &none  &kp LEFT_META  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL       &kp PRINTSCREEN    &kp BACKSPACE  &kp LEFT   &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
-&none  &mo 6          &kp LC(P)     &kp LC(O)       &kp LC(PERIOD)  &none              &none          &kp RC(Z)  &kp RC(X)     &kp RC(B)  &none          &none
+&none  &mo 6          &kp LC(P)     &kp LC(O)       &kp LC(PERIOD)  &none              &none          &kp RC(Z)  &kp RC(G)     &kp RC(B)  &none          &none
                                     &trans          &trans          &trans             &kp SPACE      &trans     &trans
             >;
         };
@@ -75,7 +75,7 @@
             bindings = <
 &trans  &kp PIPE   &kp RA(W)  &kp RA(E)  &kp AMPERSAND  &kp LS(W)    &none      &kp HOME      &kp UP_ARROW    &kp END    &trans            &trans
 &trans  &kp RA(A)  &kp RA(S)  &kp RA(D)  &kp RA(F)      &kp EQUAL    &kp RA(L)  &kp LEFT      &kp DOWN_ARROW  &kp RIGHT  &kp RA(Y)         &trans
-&trans  &kp LS(T)  &kp RA(X)  &kp RA(C)  &kp LS(G)      &kp LS(C)    &kp RA(H)  &kp RA(SEMI)  &kp RA(O)       &kp RA(P)  &kp LS(NUMBER_4)  &trans
+&trans  &kp LS(T)  &kp RA(X)  &kp RA(C)  &kp LS(X)      &kp LS(C)    &kp RA(H)  &kp RA(SEMI)  &kp RA(O)       &kp RA(P)  &kp LS(NUMBER_4)  &trans
                               &trans     &trans         &kp SPACE    &trans     &trans        &trans
             >;
         };
@@ -84,14 +84,14 @@
             bindings = <
 &trans  &trans  &trans      &trans             &trans           &trans             &kp RA(I)  &kp N7  &kp N8  &kp N9  &kp RA(J)  &trans
 &trans  &trans  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LOCKING_NUM    &kp RA(L)  &kp N4  &kp N5  &kp N6  &kp RA(K)  &trans
-&trans  &trans  &trans      &trans             &kp C_PP         &trans             &kp G      &kp N1  &kp N2  &kp N3  &kp T      &trans
+&trans  &trans  &trans      &trans             &kp C_PP         &trans             &kp X      &kp N1  &kp N2  &kp N3  &kp T      &trans
                             &mo 4              &trans           &trans             &trans     &trans  &kp N0
             >;
         };
 
         digit_operations {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp DELETE     &kp G             &kp RA(I)         &kp T       &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp DELETE     &kp X             &kp RA(I)         &kp T       &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp BACKSPACE  &kp RA(J)         &kp RA(K)         &kp RA(L)   &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans         &kp LS(NUMBER_1)  &kp LS(NUMBER_4)  &kp LS(N5)  &trans  &trans
                         &trans  &trans  &trans    &trans         &trans            &trans
